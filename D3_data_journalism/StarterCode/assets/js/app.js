@@ -22,3 +22,13 @@ var svg = d3.select("#scatter")
 
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+ // Import Data
+d3.csv("assets/data/data.csv").then(function(stateData) {
+
+  // Step 1: Parse Data/Cast as numbers
+  // ==============================
+  stateData.forEach(function(data) {
+    data.poverty = +data.poverty;
+    data.healthcare = +data.healthcare;
+  }); 
