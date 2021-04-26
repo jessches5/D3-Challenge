@@ -103,3 +103,12 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
     .on("mouseout", function(data, index) {
       toolTip.hide(data);
     });
+
+    // Create axes labels
+    chartGroup.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left + 40)
+      .attr("x", 0 - (height / 2))
+      .attr("dy", "1em")
+      .attr("class", "axisText")
+      .text("Percentage with Access to Healthcare");
