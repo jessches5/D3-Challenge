@@ -97,4 +97,9 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
     // ==============================
     circlesGroup.on("mouseover", function(data) {
       toolTip.show(data, this);
-    }) 
+    })
+    
+    // onmouseout event
+    .on("mouseout", function(data, index) {
+      toolTip.hide(data);
+    });
