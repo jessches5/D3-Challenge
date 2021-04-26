@@ -53,3 +53,6 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
     chartGroup.append("g")
       .attr("transform", `translate(0, ${height})`)
       .call(bottomAxis);
+
+      chartGroup.append("g")
+      .call(leftAxis);
