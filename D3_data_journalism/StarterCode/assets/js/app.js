@@ -79,3 +79,12 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
     .attr("r", "17")
     .attr("text-anchor", "middle")
     .style("fill", "white");
+
+    // Step 6: Initialize tool tip
+    // ==============================
+    var toolTip = d3.tip()
+      .attr("class", "tooltip")
+      .offset([4, -8])
+      .html(function(d) {
+        return (`${d.state}<hr><br>Percentage in Poverty: ${d.poverty}<br>Percentage with access to healthcare: ${d.healthcare}`);
+      });
