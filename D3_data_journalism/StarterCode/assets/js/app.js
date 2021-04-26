@@ -88,3 +88,7 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
       .html(function(d) {
         return (`${d.state}<hr><br>Percentage in Poverty: ${d.poverty}<br>Percentage with access to healthcare: ${d.healthcare}`);
       });
+
+      // Step 7: Create tooltip in the chart
+    // ==============================
+    chartGroup.call(toolTip);
