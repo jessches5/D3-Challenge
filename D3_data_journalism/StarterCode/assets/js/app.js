@@ -10,3 +10,6 @@ var margin = {
   left: 100
 };
 
+// Set width and height variables
+var width = svgWidth - margin.left - margin.right;
+var height = svgHeight - margin.top - margin.bottom;
