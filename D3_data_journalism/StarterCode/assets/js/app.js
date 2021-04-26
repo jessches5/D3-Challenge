@@ -92,3 +92,9 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
       // Step 7: Create tooltip in the chart
     // ==============================
     chartGroup.call(toolTip);
+
+   // Step 8: Create event listeners to display and hide the tooltip
+    // ==============================
+    circlesGroup.on("mouseover", function(data) {
+      toolTip.show(data, this);
+    }) 
